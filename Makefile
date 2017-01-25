@@ -34,16 +34,16 @@ $(NAME): $(LIBDIR)/$(LIB) $(OBJ)
 	@gcc $(CFLAGS) $< -c -o $@
 
 $(LIBDIR)/$(LIB):
-	@cd libft && make
+	#@cd libft && make
 
 clean:
 	@echo [RM] "*.o"
 	@rm -f $(OBJ)
-	@cd libft && make clean
+	#@cd libft && make clean
 
 fclean: clean
 	@echo [RM] $(NAME)
 	@rm -f $(NAME)
-	@cd libft && make fclean --silent
+	#@cd libft && make fclean --silent
 
 re: fclean all
